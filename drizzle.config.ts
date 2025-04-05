@@ -19,4 +19,3 @@ export default defineConfig({
   verbose: env.NODE_ENV !== "production",
   casing: "snake_case",
 });
-

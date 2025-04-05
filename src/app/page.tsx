@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <main className="container max-w-md mx-auto px-4 py-6 pb-20">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Football Market</h1>
+        <h1 className="text-2xl font-bold">La Bandita Market</h1>
         <UserBalance cash={user.cash} />
       </div>
 

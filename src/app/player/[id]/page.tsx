@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
+import PlayerClient from "./client";
 import type { PageProps } from "@/utils";
 import { db } from "@/db";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { UserBalance } from "@/components/user-balance";
 import { notFound } from "next/navigation";
-
-const PlayerClient = dynamic(() => import("./client"), { ssr: false });
 
 type Props = PageProps<{ id: string }>;
 

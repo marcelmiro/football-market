@@ -1,13 +1,23 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
 import { useBottomNavigation } from "@/providers/bottom-navigation-provider";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PriceChart } from "@/components/price-chart";
 import { Button } from "@/components/ui/button";
-import { ActivityList } from "@/components/activity-list";
 import { TransactionVault } from "@/components/transaction-vault";
+
+const PriceChart = dynamic(
+  () => import("@/components/price-chart").then((mod) => mod.PriceChart),
+  { ssr: false }
+);
+
+const ActivityList = dynamic(
+  () => import("@/components/activity-list").then((mod) => mod.ActivityList),
+  { ssr: false }
+);
 
 export default function PlayerClient(props: {
   id: string;
